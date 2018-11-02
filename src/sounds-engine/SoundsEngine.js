@@ -1,13 +1,13 @@
 import Tone from 'tone';
 
 const samples = {
-  'A0': '/samples/A.mp3',
-  'B0': '/samples/B.mp3',
-  'C1': '/samples/C.mp3',
-  'D1': '/samples/D.mp3',
-  'E1': '/samples/E.mp3',
-  'F1': '/samples/F.mp3',
-  'G1': '/samples/G.mp3'
+  'A0': process.env.PUBLIC_URL + '/samples/A.mp3',
+  'B0': process.env.PUBLIC_URL + '/samples/B.mp3',
+  'C1': process.env.PUBLIC_URL + '/samples/C.mp3',
+  'D1': process.env.PUBLIC_URL + '/samples/D.mp3',
+  'E1': process.env.PUBLIC_URL + '/samples/E.mp3',
+  'F1': process.env.PUBLIC_URL + '/samples/F.mp3',
+  'G1': process.env.PUBLIC_URL + '/samples/G.mp3'
 };
 
 const hangSampler = new Tone.Sampler(samples, {
