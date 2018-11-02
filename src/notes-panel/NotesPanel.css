@@ -1,0 +1,13 @@
+.notes-panel-container {
+    padding: 20px;
+}
+
+.notes-panel-container .card {
+    width: 30rem;
+}
+
+.notes-panel .btn {
+    width: 44px;
+    height: 44px;
+    margin: 0 5px;
+}
