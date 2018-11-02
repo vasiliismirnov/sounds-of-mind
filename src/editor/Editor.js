@@ -14,9 +14,11 @@ class Editor extends Component {
       <div>
         <div className="editor-tools-panel">
           <PlayPanel></PlayPanel>
-          <NotesPanel addNote={addNote}></NotesPanel>
+          <NotesPanel hangId="standard" hangName="Standard Hang" addNote={addNote}></NotesPanel>
+          <NotesPanel hangId="etnic" hangName="Etnic Hang" addNote={addNote}></NotesPanel>
         </div>
-        <NotesRoll notes={notes} barSize={barSize} deleteNote={deleteNote}></NotesRoll>
+        <NotesRoll hangId="standard" notes={notes.standard} barSize={barSize} deleteNote={deleteNote}></NotesRoll>
+        <NotesRoll hangId="etnic" notes={notes.etnic} barSize={barSize} deleteNote={deleteNote}></NotesRoll>
       </div>
     );
   }
@@ -31,8 +33,9 @@ const mapStateToProps = store => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addNote: value => dispatch(addNote(value)),
-    deleteNote: id => dispatch(deleteNote(id))
+    addNote: (hangId, value) => {
+      return dispatch(addNote(hangId, value));},
+    deleteNote: (hangId, noteId) => dispatch(deleteNote(hangId, noteId))
   }
 }
 

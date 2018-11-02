@@ -1,22 +1,22 @@
 import { playSequence, stopSequence } from '../sounds-engine/SoundsEngine';
 
 const play = (notes) => {
-  const noteValues = notes.map(note => note.value);
-  return playSequence(noteValues);
+  return playSequence(notes);
 };
 
-const stop = (sequence) => {
-  stopSequence(sequence);
+const stop = (sequences) => {
+  stopSequence(sequences);
 };
 
 const playback = (state = {}, action) => {
   switch (action.type) {
     case 'PLAY_SEQUENCE':
-      const sequence = play(action.payload);
-      return {sequence: sequence, isPlaying: true};
+      console.log(action);
+      const sequences = play(action.payload);
+      return {sequences: sequences, isPlaying: true};
     case 'STOP_SEQUENCE':
-      stop(state.sequence);
-      return {sequence: null, isPlaying: false};
+      stop(state.sequences);
+      return {sequences: null, isPlaying: false};
     default:
       return state;
   }

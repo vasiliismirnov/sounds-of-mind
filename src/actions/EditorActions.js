@@ -1,13 +1,15 @@
-export function addNote(value) {
+export function addNote(hangId, value) {
   return {
     type: 'ADD_NOTE',
-    payload: value
+    hangId: hangId,
+    payload: value,
   }
 }
 
-export function deleteNote(id) {
+export function deleteNote(hangId, noteId) {
   return {
     type: 'DELETE_NOTE',
-    payload: id
+    hangId: hangId,
+    payload: noteId
   }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import hang from '../sounds-engine/SoundsEngine';
 import { playSequence, stopSequence } from '../actions/PlayActions';
 import { connect } from 'react-redux';
 import './PlayPanel.css';
@@ -8,7 +7,6 @@ class PlayPanel extends Component {
 
   constructor(props) {
     super(props);
-    this.hang = hang;
   }
 
   onPlayBtnClick = e => {

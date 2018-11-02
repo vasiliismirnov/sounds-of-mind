@@ -1,17 +1,19 @@
 import uuidv4 from 'uuid/v4';
 
-const notes = (state = [], action) => {
+const notes = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_NOTE':
-      return [
-        ...state, 
+      if (!state[action.hangId]) {
+        state[action.hangId] = [];
+      }
+      state[action.hangId].push(
         {
-          id: uuidv4(),
-          value: action.payload
-        }
-      ];
+        id: uuidv4(),
+        value: action.payload
+      });
+      return state;
     case 'DELETE_NOTE':
-      return state.filter((item) => item.id !== action.payload);
+      return state[action.hangId].filter((item) => item.id !== action.payload);
     default:
       return state;
   }

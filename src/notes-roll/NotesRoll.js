@@ -45,7 +45,7 @@ class NotesRoll extends Component {
   }
 
   onNoteItemClick = (id) => {
-    this.props.deleteNote(id);
+    this.props.deleteNote(this.props.hangId, id);
   }
 
   render() {
