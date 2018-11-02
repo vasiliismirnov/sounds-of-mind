@@ -18,6 +18,12 @@ Click Play/Stop buttons from 'Playback' section to check your track.
 
 Enjoy.
 
+## Local setup
+
+- Clone repository
+- From the project folder run `npm install`, then run `npm start`
+- Started application will appear in browser, if not, go to `localhost:3000`
+
 ## Built With
 
 * [Create React App](https://github.com/facebook/create-react-app) - This project was bootstrapped with Create React App
