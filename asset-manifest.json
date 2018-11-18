@@ -1,15 +1,15 @@
 {
-  "main.css": "/static/css/main.1ea0ac2d.chunk.css",
-  "main.js": "/static/js/main.96c4c577.chunk.js",
-  "main.js.map": "/static/js/main.96c4c577.chunk.js.map",
-  "static/css/1.362a059e.chunk.css": "/static/css/1.362a059e.chunk.css",
-  "static/js/1.11023266.chunk.js": "/static/js/1.11023266.chunk.js",
-  "static/js/1.11023266.chunk.js.map": "/static/js/1.11023266.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/1.362a059e.chunk.css.map": "/static/css/1.362a059e.chunk.css.map",
-  "static/css/main.1ea0ac2d.chunk.css.map": "/static/css/main.1ea0ac2d.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.62b662b5c6d88c1432e1eece2491927c.js": "/precache-manifest.62b662b5c6d88c1432e1eece2491927c.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/sounds-of-mind/static/css/main.1ea0ac2d.chunk.css",
+  "main.js": "/sounds-of-mind/static/js/main.3fed99d3.chunk.js",
+  "main.js.map": "/sounds-of-mind/static/js/main.3fed99d3.chunk.js.map",
+  "static/css/1.362a059e.chunk.css": "/sounds-of-mind/static/css/1.362a059e.chunk.css",
+  "static/js/1.11023266.chunk.js": "/sounds-of-mind/static/js/1.11023266.chunk.js",
+  "static/js/1.11023266.chunk.js.map": "/sounds-of-mind/static/js/1.11023266.chunk.js.map",
+  "runtime~main.js": "/sounds-of-mind/static/js/runtime~main.0eb73b56.js",
+  "runtime~main.js.map": "/sounds-of-mind/static/js/runtime~main.0eb73b56.js.map",
+  "static/css/main.1ea0ac2d.chunk.css.map": "/sounds-of-mind/static/css/main.1ea0ac2d.chunk.css.map",
+  "static/css/1.362a059e.chunk.css.map": "/sounds-of-mind/static/css/1.362a059e.chunk.css.map",
+  "index.html": "/sounds-of-mind/index.html",
+  "precache-manifest.4f27d3f9cd3317f0c6fd1b907c34e6c5.js": "/sounds-of-mind/precache-manifest.4f27d3f9cd3317f0c6fd1b907c34e6c5.js",
+  "service-worker.js": "/sounds-of-mind/service-worker.js"
 }
