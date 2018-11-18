@@ -1,38 +1,31 @@
-import React, { Component } from 'react';
-import hang from '../sounds-engine/SoundsEngine';
+import React from 'react';
 import { playSequence, stopSequence } from '../actions/PlayActions';
 import { connect } from 'react-redux';
 import './PlayPanel.css';
 
-class PlayPanel extends Component {
+const PlayPanel = ({bars, isPlaying, playSequence, stopSequence}) => {
 
-  constructor(props) {
-    super(props);
-    this.hang = hang;
+  const onPlayBtnClick = e => {
+    const beats = bars.reduce((aggregatedBeats, bar) => 
+      aggregatedBeats.concat(bar.beats), []);
+    playSequence(beats);
   }
 
-  onPlayBtnClick = e => {
-    const { notes } = this.props;
-    this.props.playSequence(notes);
+  const onStopBtnClick = e => {
+    stopSequence();
   }
 
-  onStopBtnClick = e => {
-    this.props.stopSequence();
-  }
-
-  render() {
-    const { isPlaying } = this.props;
-
-    return (
+  return (
+    <div className="column">
       <div className="play-panel-container">
-        <div className="card border-info mb-3">
+        <div className="card border-info">
           <div className="card-header">Playback</div>
           <div className="card-body">
             <div className="tool-panel-item">
-              <button type="button" className="btn btn-info" onClick={this.onPlayBtnClick} disabled={isPlaying}>
+              <button type="button" className="btn btn-info" onClick={onPlayBtnClick} disabled={isPlaying}>
                 <i className="button-icon button-play"></i>
               </button>
-              <button type="button" className="btn btn-info" onClick={this.onStopBtnClick} disabled={!isPlaying}>
+              <button type="button" className="btn btn-info" onClick={onStopBtnClick} disabled={!isPlaying}>
                 <i className="button-icon button-stop"></i>
               </button>
             </div>
@@ -41,20 +34,20 @@ class PlayPanel extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 const mapStateToProps = store => {
   return {
-    notes: store.notes,
+    bars: store.bars,
     isPlaying: store.playback.isPlaying
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    playSequence: notes => dispatch(playSequence(notes)),
+    playSequence: beats => dispatch(playSequence(beats)),
     stopSequence: () => dispatch(stopSequence())
   }
 }

@@ -1,14 +1,25 @@
 .play-panel-container {
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
-.play-panel-container .card {
-    width: 20rem;
+.play-panel-container .border-info {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.play-panel-container .card-header {
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.play-panel-container .card-body {
+    padding: 5px;
 }
 
 .play-panel-container .card .btn {
-    margin: 0 10px;
-    padding: 5px;
+    margin: 0 5px;
+    height: auto;
 }
 
 .button-icon {

@@ -1,7 +1,7 @@
 import { playSequence, stopSequence } from '../sounds-engine/SoundsEngine';
 
 const play = (notes) => {
-  const noteValues = notes.map(note => note.value);
+  const noteValues = notes.map(note => note.values);
   return playSequence(noteValues);
 };
 
