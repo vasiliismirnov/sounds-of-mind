@@ -10,29 +10,37 @@ const samples = {
   'G1': process.env.PUBLIC_URL + '/samples/G.mp3'
 };
 
-const hangSampler = new Tone.Sampler(samples, {
-  'release' : 1
-}).toMaster();
+const hangSampler = new Tone.Sampler(samples, {'release' : 1}).toMaster();
 
 export default hangSampler;
 
 export function playSequence(notes) {
-  var sequence = new Tone.Sequence((time, note) => {
-    hangSampler.triggerAttack(note);
-  }, notes, "4n").start();
-  sequence.humanize = true;
-  sequence.loop = true;
+  const sequences = [];
+  const notesSizes = notes.map(value => value.length);
+  const maxLength = Math.max(...notesSizes);
+
+  for(let i = 0; i < maxLength; i++) {
+    const notesPart = notes.map(value => value[i]);
+    let sequence = new Tone.Sequence((time, note) => {
+      hangSampler.triggerAttack(note);
+    }, notesPart, "4n").start();
+    sequence.humanize = true;
+    sequence.loop = true;
+    sequences.push(sequence);
+  }
 
   Tone.Transport.bpm.value = 120;
   Tone.Transport.start();
   Tone.Transport.loop = false;
 
-  return sequence;
+  return sequences;
 };
 
-export function stopSequence(sequence) {
-  if (sequence) {
-    sequence.stop();
+export function stopSequence(sequences) {
+  if (sequences) {
+    sequences.forEach(sequence => {
+      sequence.stop();
+    });
   }
   Tone.Transport.stop();
 };

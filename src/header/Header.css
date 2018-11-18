@@ -1,4 +1,7 @@
-.app-header a {
-  width: 100%;
+.app-header {
+  font-size: 24px;
+}
+
+.app-header .column {
   text-align: center;
 }
