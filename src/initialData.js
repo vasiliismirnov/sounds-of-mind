@@ -1,6 +1,5 @@
 import uuidv4 from 'uuid/v4';
 
-// Track Bars map.
 /**
  * Track Bars map.
  * Bar is object like:
@@ -10,7 +9,7 @@ import uuidv4 from 'uuid/v4';
  *     beats: [                         // array with beats
  *         { 
  *             beatId: BEAT_ID,     // unique identifier of the beat
- *             values: ['A0', 'C1']     // list of the note values in the beat
+ *             values: ['A3', 'C3']     // list of the note values in the beat
  *         }
  *     ]
  * }
@@ -20,37 +19,37 @@ export const track = {
     {
       barId: uuidv4(),
       beats: [
-        { beatId: uuidv4(), values: ['A0', 'C1']},
-        { beatId: uuidv4(), values: ['C1', 'E1']},
         { beatId: uuidv4(), values: []},
-        { beatId: uuidv4(), values: ['E1']}
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []}
       ]
     },
     {
       barId: uuidv4(),
       beats: [
-        { beatId: uuidv4(), values: ['A0', 'C1']},
-        { beatId: uuidv4(), values: ['C1', 'E1']},
         { beatId: uuidv4(), values: []},
-        { beatId: uuidv4(), values: ['E1']}
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []}
       ]
     },
     {
       barId: uuidv4(),
       beats: [
-        { beatId: uuidv4(), values: ['A0', 'C1']},
-        { beatId: uuidv4(), values: ['C1', 'E1']},
         { beatId: uuidv4(), values: []},
-        { beatId: uuidv4(), values: ['E1']}
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []}
       ]
     },
     {
       barId: uuidv4(),
       beats: [
-        { beatId: uuidv4(), values: ['A0', 'C1']},
-        { beatId: uuidv4(), values: ['E1']},
-        { beatId: uuidv4(), values: ['F1']},
-        { beatId: uuidv4(), values: ['E1']}
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []},
+        { beatId: uuidv4(), values: []}
       ]
     }
   ],

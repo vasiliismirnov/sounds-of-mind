@@ -21,3 +21,10 @@ export function removeBarItem(barId) {
     payload: barId
   }
 };
+
+export function resetTrack() {
+  return {
+    type: 'RESET_TRACK',
+    payload: null
+  }
+};

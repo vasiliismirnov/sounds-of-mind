@@ -1,4 +1,5 @@
 import uuidv4 from 'uuid/v4';
+import { track } from '../initialData';
 
 const switchNoteHandler = (state, beatId, noteValue) => {
   let beatToUpdateIndex = -1;
@@ -55,6 +56,10 @@ const removeBar = (state, barId) => {
   return state.filter(bar => bar.barId !== barId);
 }
 
+const resetTrack = (state) => {
+  return track.bars;
+}
+
 const bars = (state = [], action) => {
   switch (action.type) {
     case 'SWITCH_NOTE':
@@ -66,6 +71,8 @@ const bars = (state = [], action) => {
     case 'REMOVE_BAR':
       const barId = action.payload;
       return removeBar(state, barId);
+    case 'RESET_TRACK':
+      return resetTrack(state);
     default:
       return state;
   }

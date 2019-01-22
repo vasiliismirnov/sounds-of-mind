@@ -1,46 +1,38 @@
 import Tone from 'tone';
 
-const samples = {
-  'A0': process.env.PUBLIC_URL + '/samples/A.mp3',
-  'B0': process.env.PUBLIC_URL + '/samples/B.mp3',
-  'C1': process.env.PUBLIC_URL + '/samples/C.mp3',
-  'D1': process.env.PUBLIC_URL + '/samples/D.mp3',
-  'E1': process.env.PUBLIC_URL + '/samples/E.mp3',
-  'F1': process.env.PUBLIC_URL + '/samples/F.mp3',
-  'G1': process.env.PUBLIC_URL + '/samples/G.mp3'
+const SAMPLES = {
+  'C3': process.env.PUBLIC_URL + '/samples/tank/C.mp3',
+  'D3': process.env.PUBLIC_URL + '/samples/tank/D.mp3',
+  'E3': process.env.PUBLIC_URL + '/samples/tank/E.mp3',
+  'G3': process.env.PUBLIC_URL + '/samples/tank/G.mp3',
+  'A3': process.env.PUBLIC_URL + '/samples/tank/A.mp3',
 };
 
-const hangSampler = new Tone.Sampler(samples, {'release' : 1}).toMaster();
+const SAMPLER = new Tone.Sampler(SAMPLES, {'release' : 1}).toMaster();
+const NOTE_SIZE = 4;
+const NOTE_MEASURE = `${NOTE_SIZE}n`;
+const START_DELAY = "+0.1";  // +0.1 to try to avoid Tone.js notes missing (https://github.com/Tonejs/Tone.js/issues/425).
 
-export default hangSampler;
+export function playSequence(notes, tempo) {
+  const events = notes.map((note, index) => [index * Tone.Time(NOTE_MEASURE), note]);
 
-export function playSequence(notes) {
-  const sequences = [];
-  const notesSizes = notes.map(value => value.length);
-  const maxLength = Math.max(...notesSizes);
+  const partToPlay = new Tone.Part(function(time, chord) {
+    if (chord.length > 0) {
+      SAMPLER.triggerAttackRelease(chord, NOTE_MEASURE, time);
+    }
+  }, events).start(START_DELAY);
 
-  for(let i = 0; i < maxLength; i++) {
-    const notesPart = notes.map(value => value[i]);
-    let sequence = new Tone.Sequence((time, note) => {
-      hangSampler.triggerAttack(note);
-    }, notesPart, "4n").start();
-    sequence.humanize = true;
-    sequence.loop = true;
-    sequences.push(sequence);
-  }
+  partToPlay.loop = true;
+  partToPlay.loopEnd = `${notes.length / NOTE_SIZE}m`;
 
-  Tone.Transport.bpm.value = 120;
-  Tone.Transport.start();
-  Tone.Transport.loop = false;
+  Tone.Transport.bpm.value = tempo;
+  Tone.Transport.start(START_DELAY);
 
-  return sequences;
+  return partToPlay;
 };
 
-export function stopSequence(sequences) {
-  if (sequences) {
-    sequences.forEach(sequence => {
-      sequence.stop();
-    });
-  }
+export function stopSequence(partToPlay) {
+  partToPlay.stop();
+
   Tone.Transport.stop();
 };
