@@ -17,7 +17,7 @@ You can play with drum sounds [here](https://vasiliismirnov.github.io/sounds-of-
 
   * Click **Add bar** button to add new empty bar to the end of sequence.
 
-  * Click **-** button on right corner of each bar to remove it.
+  * Click **- (minus)** button on right corner of each bar to remove it.
 
   * Click **Reset** button to delete all changes and return back to initial state.
 
