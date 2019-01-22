@@ -6,8 +6,8 @@ class Header extends Component {
   render() {
     return (
       <header className="app-header row">
-        <nav className="column">
-          <a className="" href="/">Sounds of Mind</a>
+        <nav className="col">
+          <a className="app-header-title" href="/">Sounds of Mind</a>
         </nav>
       </header>
     );

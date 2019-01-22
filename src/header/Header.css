@@ -1,7 +1,18 @@
 .app-header {
-  font-size: 24px;
+  font-size: var(--size-5);
+  background-color: var(--color-4);
+  padding: var(--size-5);
 }
 
-.app-header .column {
+.app-header .col {
   text-align: center;
+}
+
+.app-header-title {
+  color: var(--color-2);
+}
+
+.app-header-title:hover {
+  color: var(--color-2);
+  text-decoration: none;
 }
