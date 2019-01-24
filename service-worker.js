@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sounds-of-mind/precache-manifest.aff2e092c830fd0c90e3ffb3f671685e.js"
+  "/sounds-of-mind/precache-manifest.c823ca7a53c193ccb94303fb60b44022.js"
 );
 
 workbox.clientsClaim();

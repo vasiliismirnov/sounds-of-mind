@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/sounds-of-mind/static/media/fa-solid-900.8086e197.woff2"
   },
   {
-    "revision": "f6c4a9ff2c7e830f3b8d",
-    "url": "/sounds-of-mind/static/css/main.d65a372d.chunk.css"
+    "revision": "3b6153e0120e3f991c9e",
+    "url": "/sounds-of-mind/static/css/main.3d1e02a9.chunk.css"
   },
   {
     "revision": "27603739fe78fee587c7b84873475b61",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/sounds-of-mind/static/media/fa-brands-400.b89c6c51.woff2"
   },
   {
-    "revision": "f6c4a9ff2c7e830f3b8d",
-    "url": "/sounds-of-mind/static/js/main.f6c4a9ff.chunk.js"
+    "revision": "3b6153e0120e3f991c9e",
+    "url": "/sounds-of-mind/static/js/main.3b6153e0.chunk.js"
   },
   {
     "revision": "dd4ff1196905f0585aef2c80486869e9",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/sounds-of-mind/static/media/fa-regular-400.734248d0.svg"
   },
   {
-    "revision": "1709a2810c3752483683f3f7d287aa89",
-    "url": "/sounds-of-mind/static/media/fa-solid-900.1709a281.ttf"
-  },
-  {
     "revision": "f72d546abcc27880adf8428792c72519",
     "url": "/sounds-of-mind/static/media/fa-solid-900.f72d546a.eot"
+  },
+  {
+    "revision": "1709a2810c3752483683f3f7d287aa89",
+    "url": "/sounds-of-mind/static/media/fa-solid-900.1709a281.ttf"
   },
   {
     "revision": "fef43c1fd872ef7f1880483d9b63ccf2",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/sounds-of-mind/static/css/1.63405c4b.chunk.css"
   },
   {
-    "revision": "9cd90319ba3d194a52fbab5d10137969",
+    "revision": "dfa993bca083eee1bd126310b90c28b4",
     "url": "/sounds-of-mind/index.html"
   }
 ];
