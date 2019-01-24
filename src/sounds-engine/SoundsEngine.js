@@ -23,8 +23,6 @@ const NOTE_MEASURE = `${NOTE_SIZE}n`;
 const START_DELAY = "+0.1";  // +0.1 to try to avoid Tone.js notes missing (https://github.com/Tonejs/Tone.js/issues/425).
 
 const selectSampler = (instrument) => {
-  console.log(instrument);
-
   switch (instrument) {
     case 'hang':
       return HANG_SAMPLER;
