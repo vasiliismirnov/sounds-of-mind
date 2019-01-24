@@ -5,10 +5,17 @@ export function changeTempo(tempo) {
   }
 }
 
-export function playSequence(notes, tempo) {
+export function changeInstrument(instrument) {
+  return {
+    type: 'CHANGE_INSTRUMENT',
+    payload: instrument
+  }
+}
+
+export function playSequence(notes, tempo, instrument) {
   return {
     type: 'PLAY_SEQUENCE',
-    payload: {notes: notes, tempo: tempo}
+    payload: {notes: notes, tempo: tempo, instrument}
   }
 }
 
