@@ -51,12 +51,13 @@ export const track = {
         { beatId: uuidv4(), values: []},
         { beatId: uuidv4(), values: []}
       ]
-    }
+    },
   ],
   barSize: 4,
   tempo: 120,
+  instrument: 'hang',
   playback: {
     sequence: null,
     isPlaying: false
-  }
+  },
 };

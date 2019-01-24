@@ -2,7 +2,7 @@
 
 ## Description
 
-Simple Sequencer for the [Steel Tongue Drum](https://en.wikipedia.org/wiki/Steel_tongue_drum).
+Simple Sequencer for the [Hang](https://en.wikipedia.org/wiki/Hang_(instrument)) or [Steel Tongue Drum](https://en.wikipedia.org/wiki/Steel_tongue_drum).
 
 Created as Ract/Redux and Web Audio API learning project. 
 
@@ -23,7 +23,9 @@ You can play with drum sounds [here](https://vasiliismirnov.github.io/sounds-of-
 
 * Click **Play/Stop** buttons from **Playback** section to listen your track.
 
-* Drag input range control from the **Controls** section to change tempo of the track.
+* Drag **Tempo** input range control from the **Controls** section to change tempo of the track.
+
+* Click **Instrument** control from the **Controls** section to change sound of your track.
 
 * Enjoy!
 
